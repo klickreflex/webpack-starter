@@ -1,0 +1,16 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+    --base-color: #c6538c;
+}
+
+body {
+    background: #ccc;
+}
+
+.hello {
+    color: var(--base-color)
+}
+
