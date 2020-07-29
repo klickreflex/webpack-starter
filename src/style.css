@@ -2,6 +2,15 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+
+@font-face {
+  font-family: 'iA Writer Duospace';
+  src:  url('./iAWriterDuospace-Regular.woff2') format('woff2'),
+        url('./iAWriterDuospace-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
     --base-color: #c6538c;
 }
@@ -9,6 +18,7 @@
 body {
     background-color: #ccc;
     background-image: url('./images/background.png');
+    font-family: 'iA Writer Duospace';
 }
 
 .hello {
