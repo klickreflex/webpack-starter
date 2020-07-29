@@ -6,6 +6,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'scripts/bundle.js',
+
+        // Important make the outputPath config in file-loaders work as expected:
         publicPath: '/dist/'
         path: path.resolve(__dirname, 'dist'),
     },
