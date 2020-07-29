@@ -735,7 +735,8 @@ video {
 }
 
 body {
-  background: #ccc;
+  background-color: #ccc;
+  background-image: url(images/92aa14a37b8fcc506aec03960c174552.png);
 }
 
 .hello {

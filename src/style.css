@@ -7,7 +7,8 @@
 }
 
 body {
-    background: #ccc;
+    background-color: #ccc;
+    background-image: url('./images/background.png');
 }
 
 .hello {

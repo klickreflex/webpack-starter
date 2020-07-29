@@ -29,7 +29,15 @@ module.exports = {
                     'css-loader',
                     'postcss-loader',
                 ]
-            }
-        ]
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                loader: 'file-loader',
+                options: {
+                    // name: 'images/[path][name].[ext]',
+                    name: 'images/[contenthash].[ext]',
+                },
+            },
+        ],
     },
 };
