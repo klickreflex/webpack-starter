@@ -2,12 +2,11 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 
-
-
 module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'scripts/bundle.js',
+        publicPath: '/dist/'
         path: path.resolve(__dirname, 'dist'),
     },
 
@@ -34,15 +33,15 @@ module.exports = {
                 test: /\.(png|svg|jpg|gif)$/,
                 loader: 'file-loader',
                 options: {
-                    // name: 'images/[path][name].[ext]',
-                    name: '../images/[contenthash].[ext]',
+                    outputPath: 'images',
                 },
             },
             {
                 test: /\.(woff|woff2)$/,
                 loader: 'file-loader',
                 options: {
-                    name: '../fonts/[name].[ext]',
+                    name: '[name].[ext]',
+                    outputPath: 'fonts'
                 },
             }
         ],
