@@ -733,8 +733,8 @@ video {
 @font-face {
   font-family: 'iA Writer Duospace';
 
-  src:  url(fonts/iAWriterDuospace-Regular.woff2) format('woff2'),
-        url(fonts/iAWriterDuospace-Regular.woff) format('woff');
+  src:  url(../fonts/iAWriterDuospace-Regular.woff2) format('woff2'),
+        url(../fonts/iAWriterDuospace-Regular.woff) format('woff');
 
   font-weight: 400;
 
@@ -747,7 +747,7 @@ video {
 
 body {
   background-color: #ccc;
-  background-image: url(images/92aa14a37b8fcc506aec03960c174552.png);
+  background-image: url(../images/92aa14a37b8fcc506aec03960c174552.png);
   font-family: 'iA Writer Duospace';
 }
 

@@ -5,8 +5,8 @@
 
 @font-face {
   font-family: 'iA Writer Duospace';
-  src:  url('./fonts/iAWriterDuospace-Regular.woff2') format('woff2'),
-        url('./fonts/iAWriterDuospace-Regular.woff') format('woff');
+  src:  url('../fonts/iAWriterDuospace-Regular.woff2') format('woff2'),
+        url('../fonts/iAWriterDuospace-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
@@ -17,7 +17,7 @@
 
 body {
     background-color: #ccc;
-    background-image: url('./images/background.png');
+    background-image: url('../images/background.png');
     font-family: 'iA Writer Duospace';
 }
 

@@ -7,12 +7,12 @@ const devMode = process.env.NODE_ENV !== 'production';
 module.exports = {
     entry: './src/index.js',
     output: {
-        filename: 'bundle.js',
+        filename: 'scripts/bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
 
     plugins: [new MiniCssExtractPlugin({
-        filename: 'bundle.css',
+        filename: 'styles/bundle.css',
     })],
 
     module: {
@@ -35,14 +35,15 @@ module.exports = {
                 loader: 'file-loader',
                 options: {
                     // name: 'images/[path][name].[ext]',
-                    name: 'images/[contenthash].[ext]',
+                    name: '../images/[contenthash].[ext]',
                 },
             },
             {
                 test: /\.(woff|woff2)$/,
                 loader: 'file-loader',
                 options: {
-                    name: 'fonts/[name].[ext]',                },
+                    name: '../fonts/[name].[ext]',
+                },
             }
         ],
     },
