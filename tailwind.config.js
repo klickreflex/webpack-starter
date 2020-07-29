@@ -4,7 +4,15 @@ module.exports = {
         './src/**/*.html',
       ],
   theme: {
-    extend: {},
+    extend: {
+        fontFamily: {
+            sans: [
+                'iA Writer Duospace',
+            ],
+            serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+            mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+          },
+    },
   },
   variants: {},
   plugins: [],
