@@ -12,7 +12,7 @@ I decided I finally need to learn how to  build a Webpack config from scratch an
 - [x] Process images using file-loader
 - [x] Process fonts using file-loader
 - [x] Process Nunjucks templates
-- [ ] Create SVG sprite from icons
+- [x] Create SVG sprite from icons
 - [ ] Optimize Images
 - [ ] Minify CSS
 - [ ] Minify/Uglify JS
