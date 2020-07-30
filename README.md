@@ -11,7 +11,7 @@ I decided I finally need to learn how to  build a Webpack config from scratch an
 - [x] Extract CSS into file
 - [x] Process images using file-loader
 - [x] Process fonts using file-loader
-- [ ] Process Nunjucks templates
+- [x] Process Nunjucks templates
 - [ ] Create SVG sprite from icons
 - [ ] Optimize Images
 - [ ] Minify CSS

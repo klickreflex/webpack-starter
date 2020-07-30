@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="styles/bundle.css">
 </head>
 <body class="font-sans leading-normal text-gray-900 bg-blue-200">
-    
-    <h1 class="text-2xl">Hello world</h1>
-
+    {% block content %}
+        <h1>Default</h1>
+    {% endblock %}
     <script src="scripts/bundle.js"></script>
 </body>
 </html>

@@ -1,6 +1,8 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
+const NunjucksWebpackPlugin = require('nunjucks-webpack-plugin');
+
 
 
 
@@ -13,9 +15,19 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
     },
 
-    plugins: [new MiniCssExtractPlugin({
-        filename: 'styles/bundle.css',
-    })],
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: 'styles/bundle.css',
+        }),
+        new NunjucksWebpackPlugin({
+            templates: [
+                {
+                    from: "./src/templates/index.njk",
+                    to: "index.html"
+                },
+            ]
+        })
+    ],
 
     module: {
         rules: [

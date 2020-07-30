@@ -716,8 +716,16 @@ video {
   background-color: rgba(190, 227, 248, var(--bg-opacity));
 }
 
+.block {
+  display: block;
+}
+
 .font-sans {
   font-family: iA Writer Duospace;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
 }
 
 .leading-normal {
