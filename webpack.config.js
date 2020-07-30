@@ -1,9 +1,8 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const NunjucksWebpackPlugin = require('nunjucks-webpack-plugin');
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
-
 
 
 module.exports = {
