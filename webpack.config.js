@@ -2,13 +2,14 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 
+
+
 module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'scripts/bundle.js',
-
         // Important make the outputPath config in file-loaders work as expected:
-        publicPath: '/dist/'
+        publicPath: '../',
         path: path.resolve(__dirname, 'dist'),
     },
 
