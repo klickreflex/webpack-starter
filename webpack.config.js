@@ -2,7 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 const NunjucksWebpackPlugin = require('nunjucks-webpack-plugin');
-
+const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 
 
 
@@ -26,7 +26,19 @@ module.exports = {
                     to: "index.html"
                 },
             ]
-        })
+        }),
+        new SVGSpritemapPlugin('./src/svg/**/*.svg', {
+            output: {
+                filename: 'svg/sprite.svg',
+                svgo: true,
+            },
+            sprite: {
+                prefix: 'icon-',
+                generate: {
+                    title: false,
+                },
+            },
+        }),
     ],
 
     module: {
