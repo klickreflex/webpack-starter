@@ -1,11 +1,19 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+
+
 
 const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin');
 
 module.exports = merge(common, {
     mode: 'production',
+
+    optimization: {
+        minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
+    },
 
     plugins: [
         // Create additional instances of `HtmlCriticalWebpackPlugin`
@@ -24,5 +32,6 @@ module.exports = merge(common, {
                 blockJSRequests: false,
             }
         }),
+
     ],
 });
