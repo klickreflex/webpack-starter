@@ -20,5 +20,5 @@ I decided I finally need to learn how to  build a Webpack config from scratch an
 - [x] Minify/Uglify JS
 
 ## Future Enhancements
-- [ ] Add Webpack Dev Server with HMR
+- [x] Add Webpack Dev Server (and write files to disk)
 - [ ] Optimize Images

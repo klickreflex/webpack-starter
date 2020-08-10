@@ -1,3 +1,6 @@
+
+const WriteFilePlugin = require('write-file-webpack-plugin');
+
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 
@@ -7,6 +10,9 @@ module.exports = merge(common, {
     watchOptions: {
         ignored: /node_modules/,
     },
+    plugins: [
+        new WriteFilePlugin()
+    ],
     devtool: 'inline-source-map',
     devServer: {
         contentBase: './dist',
