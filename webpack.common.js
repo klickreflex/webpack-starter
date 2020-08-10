@@ -45,7 +45,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.pcss$/,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
@@ -71,7 +71,7 @@ module.exports = {
                     name: '[name].[ext]',
                     outputPath: 'fonts'
                 },
-            }
+            },
         ],
     },
 };

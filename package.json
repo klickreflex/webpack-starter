@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production webpack --config webpack.prod.js",
-    "serve": "webpack-dev-server --open --config webpack.dev.js",
-    "dev": "webpack --config webpack.dev.js"
+    "dev": "webpack-dev-server --config webpack.dev.js --progress --inline --open",
+    "build:dev": "webpack --config webpack.dev.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +21,7 @@
     "nunjucks-webpack-plugin": "^5.0.0",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
+    "raw-loader": "^4.0.1",
     "sass": "^1.26.10",
     "sass-loader": "^9.0.2",
     "style-loader": "^1.2.1",
