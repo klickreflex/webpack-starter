@@ -15,7 +15,10 @@ I decided I finally need to learn how to  build a Webpack config from scratch an
 - [x] Create SVG sprite from icons
 - [x] Extract critical CSS
 - [x] Split production from development tasks
-- [ ] Watch for changes
-- [ ] Optimize Images
+- [x] Watch for changes
 - [ ] Minify CSS
 - [ ] Minify/Uglify JS
+
+## Future Enhancements
+- [ ] Add Webpack Dev Server with HMR
+- [ ] Optimize Images
