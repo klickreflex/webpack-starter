@@ -16,8 +16,8 @@ I decided I finally need to learn how to  build a Webpack config from scratch an
 - [x] Extract critical CSS
 - [x] Split production from development tasks
 - [x] Watch for changes
-- [ ] Minify CSS
-- [ ] Minify/Uglify JS
+- [x] Minify CSS
+- [x] Minify/Uglify JS
 
 ## Future Enhancements
 - [ ] Add Webpack Dev Server with HMR
