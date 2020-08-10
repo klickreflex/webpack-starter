@@ -14,7 +14,8 @@ I decided I finally need to learn how to  build a Webpack config from scratch an
 - [x] Process Nunjucks templates
 - [x] Create SVG sprite from icons
 - [x] Extract critical CSS
-- [ ] Split production from development tasks
+- [x] Split production from development tasks
+- [ ] Watch for changes
 - [ ] Optimize Images
 - [ ] Minify CSS
 - [ ] Minify/Uglify JS
