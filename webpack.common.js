@@ -61,6 +61,7 @@ module.exports = {
                 test: /\.(png|svg|jpg|gif)$/,
                 loader: 'file-loader',
                 options: {
+                    name: '[name].[ext]',
                     outputPath: 'images',
                 },
             },
@@ -71,6 +72,10 @@ module.exports = {
                     name: '[name].[ext]',
                     outputPath: 'fonts'
                 },
+            },
+            {
+                test: /\.njk$/,
+                loader: "raw-loader",
             },
         ],
     },
