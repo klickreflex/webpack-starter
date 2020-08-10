@@ -4,7 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asset Management</title>
-    <link rel="stylesheet" href="styles/bundle.css">
+
+    <!-- include critical styles in head -->
+    <style>
+        
+    </style>
+
+    <!-- Load stylesheet asynchronously -->
+    <link rel="stylesheet" href="styles/bundle.css" media="print" onload="this.media='all'; this.onload=null;">
+
+    <!-- Load stylesheet in a classic way if JS is not available -->
+    <noscript>
+        <link rel="stylesheet" href="styles/bundle.css" media="all">
+    </noscript>
+
 </head>
 <body class="font-sans leading-normal text-gray-900 bg-blue-200">
     

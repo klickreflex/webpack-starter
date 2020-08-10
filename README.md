@@ -13,7 +13,8 @@ I decided I finally need to learn how to  build a Webpack config from scratch an
 - [x] Process fonts using file-loader
 - [x] Process Nunjucks templates
 - [x] Create SVG sprite from icons
+- [x] Extract critical CSS
+- [ ] Split production from development tasks
 - [ ] Optimize Images
 - [ ] Minify CSS
 - [ ] Minify/Uglify JS
-- [ ] Extract critical CSS
