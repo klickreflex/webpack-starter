@@ -18,6 +18,7 @@ I decided I finally need to learn how to  build a Webpack config from scratch an
 - [x] Watch for changes
 - [x] Minify CSS
 - [x] Minify/Uglify JS
+- [x] Add lazyloading
 
 ## Future Enhancements
 - [x] Add Webpack Dev Server (and write files to disk)
