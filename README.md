@@ -1,10 +1,11 @@
-# Webpack Lab
+# Webpack Starter for TailwindCSS & Nunjucks
 
-I decided I finally need to learn how to  build a Webpack config from scratch and here's what I've come up with so far.
+My basic webpack starter. Nunjucks is included for quick prototyping but usually thrown out for real-world projects.
 
-## Goals / Requirements
+Use at own risk, I'm not a Webpack expert.
 
-- [x] Process ES imports
+## Features
+
 - [x] Add CSS Loader
 - [x] Add PostCSS loader
 - [x] Add TailwindCSS, PostCSS-Import and Autoprefixer
@@ -18,9 +19,6 @@ I decided I finally need to learn how to  build a Webpack config from scratch an
 - [x] Watch for changes
 - [x] Minify CSS
 - [x] Minify/Uglify JS
-- [x] Add lazyloading
+- [x] lazyloading
+- [x] Use Webpack Dev Server and write files to disk
 
-## Future Enhancements
-- [x] Add Webpack Dev Server (and write files to disk)
-- [ ] Optimize Images
-w
