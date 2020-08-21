@@ -1,6 +1,8 @@
 # Webpack Starter for TailwindCSS & Nunjucks
 
-My basic webpack starter. Nunjucks is included for quick prototyping but usually thrown out for real-world projects.
+My basic webpack starter for new projects and quick prototyping
+
+(I've included Nunjucks only to have some basic templating functionality within prototypes but usually throw it out for real-world projects that usually run on different template engines).
 
 Use at own risk, I'm not a Webpack expert.
 
