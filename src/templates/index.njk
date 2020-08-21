@@ -1,21 +1,47 @@
 {% extends "../templates/base.njk" %}
 
 {% block content %}
-    <h1 class="text-2xl">Hello World</h1>
-    <p>A libero donec bibendum condimentum congue pellentesque pretium netus, elit leo arcu sem semper ridiculus aptent ante, augue maecenas tincidunt at tempus ac porttitor. Malesuada magna per nisl dui purus eros facilisi, faucibus nulla at leo semper curae. Lacinia etiam habitant pellentesque ipsum consequat commodo ultrices morbi, urna taciti ut fermentum id blandit nullam ad, tellus vulputate laoreet senectus class tincidunt eu. Odio natoque orci scelerisque tempus mauris sodales platea duis, hendrerit parturient tincidunt adipiscing venenatis blandit senectus. Lectus curabitur egestas nisi sodales habitant lacus erat ultrices fusce aliquet convallis, class non adipiscing venenatis odio interdum iaculis dapibus phasellus pulvinar. Varius aptent maecenas magna cum duis pretium lorem accumsan consectetur conubia, rhoncus tristique quis urna nisl ut phasellus integer tempor vivamus, sapien condimentum aliquam nec luctus curae malesuada faucibus etiam. Duis id dolor pellentesque lobortis ultrices commodo lacus tempus, magnis magna fringilla mollis posuere blandit integer at, ornare tristique consequat egestas habitasse curabitur sapien.</p>
-    <p>Tristique etiam nullam quam sit suspendisse platea senectus penatibus amet, sollicitudin vivamus consequat eget litora in vitae erat, sem posuere neque pharetra lorem rutrum tempus id. Primis lacus convallis suspendisse ipsum scelerisque morbi dictumst nam sociosqu, tempor vulputate eget himenaeos vestibulum tellus cubilia potenti fermentum sapien, penatibus imperdiet egestas in risus etiam pretium habitasse. Porttitor convallis non cum montes magna a nulla sem, mattis lectus curae in aptent aenean fringilla nullam, habitant inceptos hendrerit vivamus lorem facilisis natoque. Potenti praesent sem amet arcu gravida feugiat luctus dictumst nisi consequat, suscipit donec rutrum iaculis sociis torquent felis litora elementum, duis condimentum hendrerit per nibh rhoncus molestie aenean cursus. Consequat aliquam facilisis volutpat sodales semper vivamus magnis nibh congue nostra, vitae elementum felis fermentum accumsan tempor orci sit. Vehicula tellus lacinia nibh urna morbi dictum sem consectetur venenatis senectus, primis imperdiet vulputate commodo luctus aptent ad tempor maecenas, arcu egestas velit facilisis eleifend amet ipsum ut cubilia. Metus purus ridiculus convallis varius pellentesque cursus dictum sagittis, sem lobortis amet enim tempor phasellus molestie, cubilia mauris aliquam lorem in interdum lacinia.</p>
-    <p>Pulvinar congue condimentum per venenatis auctor cum adipiscing augue cras id, aliquam nam sociis neque hac proin mattis nulla magnis conubia tempor, at lobortis nisi sagittis ad elementum quisque commodo lorem. Tortor cum aenean dignissim et malesuada luctus nullam himenaeos, varius dictumst habitant magna sodales maecenas fermentum eget consequat, litora vivamus erat mi scelerisque tristique venenatis. Netus fringilla faucibus fusce penatibus magnis nostra odio, sociis leo dictumst ridiculus mollis proin, diam ante ut neque platea nunc. Leo sociosqu cum eleifend vestibulum varius pulvinar eget, tortor nisl id egestas consectetur felis ipsum, quisque primis platea erat nec proin. Purus vehicula platea adipiscing interdum a, orci litora pellentesque nibh morbi, feugiat molestie neque suscipit. Cras nec magna interdum hendrerit malesuada nulla laoreet vehicula, volutpat egestas fames condimentum eros diam felis, habitant habitasse curae purus dui lobortis himenaeos. Fusce platea molestie porttitor duis adipiscing vivamus quisque nam pharetra quis laoreet pulvinar, viverra sapien litora congue tortor metus aliquet bibendum neque consectetur. Lectus molestie nisi erat hendrerit eget netus, fusce feugiat posuere tellus rhoncus penatibus fringilla, elit adipiscing suspendisse nostra imperdiet.</p>
 
-    <!-- responsive example with automatic sizes calculation: -->
-    <img
-        data-sizes="auto"
-        data-src="./images/image-960.jpg"
-        data-srcset="
-            ./images/image-960.jpg 960w,
-            ./images/image-1600.jpg 1600w"
-        class="lazyload" />
-    <noscript>
-        <img src="./images/image-960.jpg" />
-    </noscript>
+    <h1 class="max-w-4xl px-4 mx-auto text-2xl">Hello World</h1>
+
+
+    {% import "../templates/components/card.njk" as card %}
+
+
+    {% set cardContents = [
+            { title: 'Welcome to focus within 👋', description: 'Nullam habitasse litora sagittis dui facilisis nec etiam dolor montes' },
+            { title: 'Watch me stumble...', description: '...through the world of UX engineering' },
+            { title: 'Yay, a third card!', description: 'Because alignment is everything' }
+        ]
+    %}
+
+    <div class="max-w-4xl px-4 mx-auto mt-6">
+        <div class="flex flex-wrap -mx-4">
+            {% for cardContent in cardContents %}
+                <div class="w-1/3 px-4">
+                    {{ card.c(cardContent) }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="max-w-4xl px-4 mx-auto">
+        <p class="mt-12">A libero donec bibendum condimentum congue pellentesque pretium netus, elit leo arcu sem semper ridiculus aptent ante, augue maecenas tincidunt at tempus ac porttitor. Malesuada magna per nisl dui purus eros facilisi, faucibus nulla at leo semper curae. Lacinia etiam habitant pellentesque ipsum consequat commodo ultrices morbi, urna taciti ut fermentum id blandit nullam ad, tellus vulputate laoreet senectus class tincidunt eu. Odio natoque orci scelerisque tempus mauris sodales platea duis, hendrerit parturient tincidunt adipiscing venenatis blandit senectus. Lectus curabitur egestas nisi sodales habitant lacus erat ultrices fusce aliquet convallis, class non adipiscing venenatis odio interdum iaculis dapibus phasellus pulvinar. Varius aptent maecenas magna cum duis pretium lorem accumsan consectetur conubia, rhoncus tristique quis urna nisl ut phasellus integer tempor vivamus, sapien condimentum aliquam nec luctus curae malesuada faucibus etiam. Duis id dolor pellentesque lobortis ultrices commodo lacus tempus, magnis magna fringilla mollis posuere blandit integer at, ornare tristique consequat egestas habitasse curabitur sapien.</p>
+
+        <div class="mt-4">
+            <!-- responsive example with automatic sizes calculation: -->
+            <img
+                data-sizes="auto"
+                data-src="./images/image-960.jpg"
+                data-srcset="
+                    ./images/image-960.jpg 960w,
+                    ./images/image-1600.jpg 1600w"
+                class="lazyload" />
+            <noscript>
+                <img src="./images/image-960.jpg" />
+            </noscript>
+        </div>
+    </div>
+
 {% endblock %}
 

@@ -2,6 +2,7 @@ import _ from 'lodash';
 import './styles/style.pcss';
 import 'lazysizes';
 import './templates/index.njk';
+import './templates/components/card.njk';
 
 function component() {
     const element = document.createElement('div');
