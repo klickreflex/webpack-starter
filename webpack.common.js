@@ -3,6 +3,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const NunjucksWebpackPlugin = require('nunjucks-webpack-plugin');
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
@@ -15,6 +16,8 @@ module.exports = {
     },
 
     plugins: [
+        new CleanWebpackPlugin(),
+
         new MiniCssExtractPlugin({
             filename: 'styles/bundle.css',
         }),
@@ -61,7 +64,7 @@ module.exports = {
                 test: /\.(png|svg|jpg|gif)$/,
                 loader: 'file-loader',
                 options: {
-                    name: '[name].[ext]',
+                    name: '[folder]/[name].[ext]',
                     outputPath: 'images',
                 },
             },
